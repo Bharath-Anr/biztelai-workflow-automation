@@ -637,13 +637,13 @@ export default function Dashboard({ data, uploads = [], loading, onOpenReview })
                 </div>
               </div>
               
-              {latestDoc.status === 'Pending Review' && (
+              {(latestDoc.status === 'Pending Review' || latestDoc.status === 'Failed') && (
                 <button 
                   onClick={() => onOpenReview(latestDoc.id)}
                   className="btn btn-primary"
                   style={{ padding: '6px 12px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }}
                 >
-                  Review <ArrowRight size={12} />
+                  {latestDoc.status === 'Failed' ? 'Inspect' : 'Review'} <ArrowRight size={12} />
                 </button>
               )}
             </div>

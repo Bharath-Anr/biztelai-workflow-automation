@@ -72,13 +72,13 @@ function normalizeField(field) {
 /**
  * Helper to process AI extraction asynchronously
  */
-async function processExtraction(uploadId, filePath, mimetype) {
+async function processExtraction(uploadId, filePath, mimetype, originalName = '') {
   const apiKey = process.env.GEMINI_API_KEY;
   const isSandbox = !apiKey || apiKey.trim() === '';
 
   try {
     // Call Gemini Extractor
-    const extractedData = await extractOperationalData(filePath, mimetype);
+    const extractedData = await extractOperationalData(filePath, mimetype, originalName);
     
     // Check if we extracted any rows
     if (!extractedData.rows || extractedData.rows.length === 0) {
@@ -119,8 +119,10 @@ async function processExtraction(uploadId, filePath, mimetype) {
   } catch (error) {
     console.error(`AI Extraction failed for upload ID: ${uploadId}.`, error);
     
-    if (isSandbox) {
-      // ONLY fall back to mock data in Sandbox Mode (no API key configured)
+    const isUnrelated = error.message.includes('Unrelated document format') || error.message.includes('invalid table structure');
+
+    if (isSandbox && !isUnrelated) {
+      // ONLY fall back to mock data in Sandbox Mode (no API key configured) and when it's not an unrelated document error
       console.log('Sandbox Mode active. Applying fallback mock data...');
       try {
         const mockData = mockExtract();
@@ -158,7 +160,7 @@ async function processExtraction(uploadId, filePath, mimetype) {
         });
       }
     } else {
-      // If a real API key is configured, fail hard and show a helpful error message
+      // If a real API key is configured or it is an unrelated document error in sandbox mode, fail hard and show a helpful error message
       const errMsg = error.message || 'AI extraction failed. Please verify the document format is correct and legible.';
       db.updateUpload(uploadId, {
         status: 'Failed',
@@ -206,7 +208,7 @@ app.post('/api/upload', upload.single('document'), (req, res) => {
     db.insertUpload(newUpload);
 
     // Start extraction process asynchronously so request returns immediately
-    processExtraction(newUpload.id, req.file.path, req.file.mimetype);
+    processExtraction(newUpload.id, req.file.path, req.file.mimetype, req.file.originalname);
 
     res.status(202).json({
       message: 'File uploaded and queueing for data extraction.',

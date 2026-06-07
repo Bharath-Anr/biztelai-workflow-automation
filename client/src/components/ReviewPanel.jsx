@@ -141,20 +141,6 @@ export default function ReviewPanel({ uploadId, allUploads, onBack, onSaveSucces
     );
   }
 
-  if (record.status === 'Failed') {
-    return (
-      <div className="glass-panel text-center" style={{ padding: '32px', maxWidth: '500px', margin: '40px auto' }}>
-        <h3 className="text-error" style={{ marginBottom: '16px' }}>AI Extraction Failed</h3>
-        <p style={{ color: 'var(--text-muted)', marginBottom: '24px' }}>
-          {record.validationErrors?.[0]?.message || 'We could not process this document. Please verify the file is legible.'}
-        </p>
-        <button onClick={onBack} className="btn btn-secondary">
-          Back to List
-        </button>
-      </div>
-    );
-  }
-
   if (record.status === 'Processing') {
     return (
       <div className="flex-center" style={{ height: '300px', flexDirection: 'column', gap: '16px' }}>
@@ -164,7 +150,7 @@ export default function ReviewPanel({ uploadId, allUploads, onBack, onSaveSucces
     );
   }
 
-  if (rows.length === 0) {
+  if (rows.length === 0 && record.status !== 'Failed') {
     return (
       <div className="glass-panel text-center" style={{ padding: '32px', maxWidth: '500px', margin: '40px auto' }}>
         <h3 style={{ marginBottom: '16px', color: 'white' }}>No Data Extracted</h3>
@@ -191,7 +177,7 @@ export default function ReviewPanel({ uploadId, allUploads, onBack, onSaveSucces
           <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '160px' }} title={record.fileName}>
             {record.fileName}
           </span>
-          <span className={`badge ${record.status === 'Reviewed' ? 'success' : 'warning'}`}>
+          <span className={`badge ${record.status === 'Reviewed' ? 'success' : record.status === 'Failed' ? 'error' : 'warning'}`}>
             {record.status}
           </span>
         </div>
@@ -213,8 +199,31 @@ export default function ReviewPanel({ uploadId, allUploads, onBack, onSaveSucces
         </div>
       </div>
 
-      {/* RIGHT PANE: Review Form */}
-      <div className="form-pane glass-panel">
+      {record.status === 'Failed' ? (
+        /* RIGHT PANE: Extraction Failure Card */
+        <div className="form-pane glass-panel" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+          <div className="pane-header">
+            <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-error)', fontSize: '1.1rem' }}>
+              <AlertTriangle size={18} /> Extraction Failed
+            </h3>
+          </div>
+          
+          <div className="form-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', flexGrow: 1, padding: '40px 24px', textAlign: 'center', gap: '20px' }}>
+            <div style={{ background: 'rgba(239, 68, 68, 0.1)', padding: '16px', borderRadius: '50%', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
+              <AlertTriangle size={48} className="text-error" />
+            </div>
+            <h4 style={{ color: 'white', fontSize: '1.1rem', fontWeight: 600 }}>Unrelated Document Format</h4>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', lineHeight: '1.5', maxWidth: '320px' }}>
+              {record.validationErrors?.[0]?.message || 'We could not process this document. Please verify the file is a valid operational log sheet and is fully legible.'}
+            </p>
+            <button onClick={onBack} className="btn btn-secondary" style={{ marginTop: '10px' }}>
+              Back to Audit Logs
+            </button>
+          </div>
+        </div>
+      ) : (
+        /* RIGHT PANE: Review Form */
+        <div className="form-pane glass-panel">
         <div className="pane-header">
           <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'white', fontSize: '1.1rem' }}>
             <Eye size={18} className="text-cyan" /> Verify Table Records ({rows.length} rows)
@@ -538,6 +547,7 @@ export default function ReviewPanel({ uploadId, allUploads, onBack, onSaveSucces
           </button>
         </div>
       </div>
-    </div>
-  );
+    )}
+  </div>
+);
 }

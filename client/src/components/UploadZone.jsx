@@ -206,13 +206,13 @@ export default function UploadZone({ onOpenReview, onRefreshHistory }) {
                     <span className="badge warning">Needs Review</span>
                   )}
 
-                  {(u.status === 'Pending Review' || u.status === 'Reviewed') && (
+                  {(u.status === 'Pending Review' || u.status === 'Reviewed' || u.status === 'Failed') && (
                     <button 
                       className="btn btn-primary" 
                       style={{ padding: '6px 10px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: '4px' }}
                       onClick={() => onOpenReview(u.id)}
                     >
-                      <Play size={12} fill="white" /> Review
+                      <Play size={12} fill="white" /> {u.status === 'Failed' ? 'Inspect' : 'Review'}
                     </button>
                   )}
                 </div>

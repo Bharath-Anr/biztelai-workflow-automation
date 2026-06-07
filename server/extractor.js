@@ -59,8 +59,23 @@ function mockExtract() {
 /**
  * Call Gemini Multimodal API to extract list of rows and confidence scores
  */
-async function extractOperationalData(filePath, mimeType) {
+async function extractOperationalData(filePath, mimeType, originalName = '') {
   const apiKey = process.env.GEMINI_API_KEY;
+  
+  // Check if filename indicates it should simulate a failure (useful for sandbox testing)
+  const isUnrelatedSimulated = originalName && (
+    originalName.toLowerCase().includes('unrelated') ||
+    originalName.toLowerCase().includes('invoice') ||
+    originalName.toLowerCase().includes('receipt') ||
+    originalName.toLowerCase().includes('cat') ||
+    originalName.toLowerCase().includes('dog') ||
+    originalName.toLowerCase().includes('fail')
+  );
+
+  if (isUnrelatedSimulated) {
+    console.warn(`Simulating unrelated document extraction failure for: ${originalName}`);
+    return { rows: [] };
+  }
   
   if (!apiKey || apiKey.trim() === '') {
     console.warn('GEMINI_API_KEY is not defined. Using mock data extraction fallback.');
@@ -73,6 +88,12 @@ async function extractOperationalData(filePath, mimeType) {
     const promptText = `
 You are an expert AI system for digitizing handwritten operational log sheets from a manufacturing plant.
 Locate the main table and extract all written rows of data. Do not extract empty rows.
+
+If the uploaded image or document is not an operational log sheet, does not contain a manufacturing log/table, or is completely unrelated (e.g., a landscape photo, a picture of an animal, an invoice for a different industry, a receipt, or generic unrelated text), you MUST return an empty rows array:
+{
+  "rows": []
+}
+Do not attempt to extract any rows or invent dummy data.
 
 For each row, extract the following fields: "date", "shift", "employeeNumber", "operationCode", "machineNumber", "workOrderNumber", "quantityProduced", "timeTaken".
 If a field is empty, set value to "". If a field contains a dash/hyphen (like quantity produced is "-"), set value to "-" exactly. Do not convert a dash/hyphen to "".

@@ -185,13 +185,13 @@ export default function HistoryList({ uploads, onOpenReview, onRefresh }) {
                       )}
                     </td>
                     <td style={{ textAlign: 'right' }}>
-                      {(u.status === 'Pending Review' || u.status === 'Reviewed') ? (
+                      {(u.status === 'Pending Review' || u.status === 'Reviewed' || u.status === 'Failed') ? (
                         <button 
                           className="btn btn-secondary" 
                           style={{ padding: '6px 12px', fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
                           onClick={() => onOpenReview(u.id)}
                         >
-                          <Eye size={14} /> Open
+                          <Eye size={14} /> {u.status === 'Failed' ? 'Inspect' : 'Open'}
                         </button>
                       ) : (
                         <span className="opacity-40" style={{ fontSize: '0.8rem' }}>Unavailable</span>
