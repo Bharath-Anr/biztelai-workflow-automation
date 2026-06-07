@@ -1,0 +1,23 @@
+# Node dependency directories
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Local build output
+client/dist/
+
+# Environmental variables (contains secrets)
+.env
+server/.env
+
+# Local uploaded files (temporary uploads)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# macOS system files
+.DS_Store
+
+# IDE configuration folders
+.vscode/
+.idea/
+.gemini/

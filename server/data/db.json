@@ -1,0 +1,898 @@
+{
+  "uploads": [
+    {
+      "id": "upl_eppct1jec",
+      "fileName": "Image1.jpeg",
+      "filePath": "/uploads/1780765421034-14603748.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Reviewed",
+      "uploadedAt": "2026-06-06T17:03:41.038Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": {
+              "value": "2026-06-06",
+              "confidence": 0.96
+            },
+            "shift": {
+              "value": "Shift C",
+              "confidence": 0.99
+            },
+            "employeeNumber": {
+              "value": "2540",
+              "confidence": 0.81
+            },
+            "operationCode": {
+              "value": "OP-487",
+              "confidence": 0.79,
+              "reason": "Faint handwriting."
+            },
+            "machineNumber": {
+              "value": "MC-102",
+              "confidence": 0.84
+            },
+            "workOrderNumber": {
+              "value": "WO-8748",
+              "confidence": 0.78,
+              "reason": "Digits slightly overlapping."
+            },
+            "quantityProduced": {
+              "value": "315",
+              "confidence": 0.81
+            },
+            "timeTaken": {
+              "value": "11.0",
+              "confidence": 0.83
+            }
+          }
+        ],
+        "isMock": true
+      },
+      "validationErrors": []
+    },
+    {
+      "id": "upl_btshkpdax",
+      "fileName": "Image2.jpeg",
+      "filePath": "/uploads/1780813686753-238518451.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Pending Review",
+      "uploadedAt": "2026-06-07T06:28:06.756Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": {
+              "value": "2026-06-07",
+              "confidence": 0.68,
+              "reason": "Faded ink."
+            },
+            "shift": {
+              "value": "Shift C",
+              "confidence": 0.89
+            },
+            "employeeNumber": {
+              "value": "8402",
+              "confidence": 0.89
+            },
+            "operationCode": {
+              "value": "OP-400",
+              "confidence": 0.85
+            },
+            "machineNumber": {
+              "value": "MC-100",
+              "confidence": 0.83
+            },
+            "workOrderNumber": {
+              "value": "WO-8267",
+              "confidence": 0.84
+            },
+            "quantityProduced": {
+              "value": "150",
+              "confidence": 0.69,
+              "reason": "Zero looks like a letter O."
+            },
+            "timeTaken": {
+              "value": "11.0",
+              "confidence": 0.81
+            }
+          }
+        ],
+        "isMock": true
+      },
+      "validationErrors": []
+    },
+    {
+      "id": "upl_lzgtkesow",
+      "fileName": "Image1.jpeg",
+      "filePath": "/uploads/1780813923702-635625099.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Pending Review",
+      "uploadedAt": "2026-06-07T06:32:03.706Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": {
+              "value": "2026-06-07",
+              "confidence": 0.82
+            },
+            "shift": {
+              "value": "Shift A",
+              "confidence": 0.9
+            },
+            "employeeNumber": {
+              "value": "9188",
+              "confidence": 0.83
+            },
+            "operationCode": {
+              "value": "OP-365",
+              "confidence": 0.84
+            },
+            "machineNumber": {
+              "value": "MC-102",
+              "confidence": 0.69,
+              "reason": "Last digit is smudged."
+            },
+            "workOrderNumber": {
+              "value": "WO-8132",
+              "confidence": 0.81
+            },
+            "quantityProduced": {
+              "value": "255",
+              "confidence": 0.69,
+              "reason": "Handwriting is slanted."
+            },
+            "timeTaken": {
+              "value": "3.0",
+              "confidence": 0.86
+            }
+          }
+        ],
+        "isMock": true
+      },
+      "validationErrors": []
+    },
+    {
+      "id": "upl_gu51ptflc",
+      "fileName": "Image6.jpeg",
+      "filePath": "/uploads/1780814040105-413368574.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Pending Review",
+      "uploadedAt": "2026-06-07T06:34:00.112Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": {
+              "value": "2026-06-07",
+              "confidence": 0.67,
+              "reason": "Digit is obscured."
+            },
+            "shift": {
+              "value": "Invalid Shift D",
+              "confidence": 0.97
+            },
+            "employeeNumber": {
+              "value": "8384",
+              "confidence": 0.73,
+              "reason": "Blurry image border."
+            },
+            "operationCode": {
+              "value": "OP-422",
+              "confidence": 0.82
+            },
+            "machineNumber": {
+              "value": "MC-101",
+              "confidence": 0.76,
+              "reason": "Light grey ink."
+            },
+            "workOrderNumber": {
+              "value": "WO-8315",
+              "confidence": 0.97
+            },
+            "quantityProduced": {
+              "value": "270",
+              "confidence": 0.74,
+              "reason": "Partially cropped."
+            },
+            "timeTaken": {
+              "value": "2.0",
+              "confidence": 0.7,
+              "reason": "Decimals unclear."
+            }
+          }
+        ],
+        "isMock": true
+      },
+      "validationErrors": [
+        {
+          "rowIdx": 0,
+          "field": "shift",
+          "message": "Row 1: Invalid shift: \"Invalid Shift D\". Expected Roman numeral (I, II, III) or shift letter/digit."
+        }
+      ]
+    },
+    {
+      "id": "upl_aat18nr6v",
+      "fileName": "Image1.jpeg",
+      "filePath": "/uploads/1780814148465-577069733.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Reviewed",
+      "uploadedAt": "2026-06-07T06:35:48.470Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": {
+              "value": "20/4/26",
+              "confidence": 0.95
+            },
+            "shift": {
+              "value": "I",
+              "confidence": 0.9
+            },
+            "employeeNumber": {
+              "value": "BT4710",
+              "confidence": 0.95
+            },
+            "operationCode": {
+              "value": "856430",
+              "confidence": 0.9
+            },
+            "machineNumber": {
+              "value": "MC-730",
+              "confidence": 0.95
+            },
+            "workOrderNumber": {
+              "value": "165460",
+              "confidence": 0.9
+            },
+            "quantityProduced": {
+              "value": "25",
+              "confidence": 0.9
+            },
+            "timeTaken": {
+              "value": "4.0",
+              "confidence": 0.95
+            }
+          },
+          {
+            "date": {
+              "value": "20/4/26",
+              "confidence": 0.95
+            },
+            "shift": {
+              "value": "II",
+              "confidence": 0.9
+            },
+            "employeeNumber": {
+              "value": "BT4720",
+              "confidence": 0.95
+            },
+            "operationCode": {
+              "value": "856460",
+              "confidence": 0.9
+            },
+            "machineNumber": {
+              "value": "MC-780",
+              "confidence": 0.95
+            },
+            "workOrderNumber": {
+              "value": "165470",
+              "confidence": 0.9
+            },
+            "quantityProduced": {
+              "value": "37",
+              "confidence": 0.9
+            },
+            "timeTaken": {
+              "value": "8.0",
+              "confidence": 0.95
+            }
+          },
+          {
+            "date": {
+              "value": "20/4/26",
+              "confidence": 0.95
+            },
+            "shift": {
+              "value": "III",
+              "confidence": 0.9
+            },
+            "employeeNumber": {
+              "value": "BT4720",
+              "confidence": 0.95
+            },
+            "operationCode": {
+              "value": "856470",
+              "confidence": 0.9
+            },
+            "machineNumber": {
+              "value": "MC-850",
+              "confidence": 0.95
+            },
+            "workOrderNumber": {
+              "value": "601200",
+              "confidence": 0.9
+            },
+            "quantityProduced": {
+              "value": "28",
+              "confidence": 0.9
+            },
+            "timeTaken": {
+              "value": "7.5",
+              "confidence": 0.95
+            }
+          }
+        ],
+        "isMock": false
+      },
+      "validationErrors": []
+    },
+    {
+      "id": "upl_0sn5zvr44",
+      "fileName": "Image2.jpeg",
+      "filePath": "/uploads/1780814221284-937381054.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Reviewed",
+      "uploadedAt": "2026-06-07T06:37:01.287Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": {
+              "value": "18/4/26",
+              "confidence": 0.98
+            },
+            "shift": {
+              "value": "I",
+              "confidence": 0.95
+            },
+            "employeeNumber": {
+              "value": "BT1234",
+              "confidence": 0.97
+            },
+            "operationCode": {
+              "value": "54321",
+              "confidence": 0.96
+            },
+            "machineNumber": {
+              "value": "ABC-T30",
+              "confidence": 0.97
+            },
+            "workOrderNumber": {
+              "value": "165455",
+              "confidence": 0.97
+            },
+            "quantityProduced": {
+              "value": "-",
+              "confidence": 0.9
+            },
+            "timeTaken": {
+              "value": "2.0",
+              "confidence": 0.96
+            }
+          },
+          {
+            "date": {
+              "value": "18/4/26",
+              "confidence": 0.98
+            },
+            "shift": {
+              "value": "II",
+              "confidence": 0.95
+            },
+            "employeeNumber": {
+              "value": "BT4005",
+              "confidence": 0.97
+            },
+            "operationCode": {
+              "value": "856432",
+              "confidence": 0.96
+            },
+            "machineNumber": {
+              "value": "MC-840",
+              "confidence": 0.97
+            },
+            "workOrderNumber": {
+              "value": "24686870",
+              "confidence": 0.97
+            },
+            "quantityProduced": {
+              "value": "10",
+              "confidence": 0.96
+            },
+            "timeTaken": {
+              "value": "6.0",
+              "confidence": 0.96
+            }
+          },
+          {
+            "date": {
+              "value": "18/4/26",
+              "confidence": 0.98
+            },
+            "shift": {
+              "value": "III",
+              "confidence": 0.95
+            },
+            "employeeNumber": {
+              "value": "BT6025",
+              "confidence": 0.97
+            },
+            "operationCode": {
+              "value": "856433",
+              "confidence": 0.96
+            },
+            "machineNumber": {
+              "value": "MC-850",
+              "confidence": 0.97
+            },
+            "workOrderNumber": {
+              "value": "24686870",
+              "confidence": 0.97
+            },
+            "quantityProduced": {
+              "value": "5",
+              "confidence": 0.96
+            },
+            "timeTaken": {
+              "value": "3.5",
+              "confidence": 0.96
+            }
+          }
+        ],
+        "isMock": false
+      },
+      "validationErrors": [
+        {
+          "rowIdx": 2,
+          "field": "workOrderNumber",
+          "message": "Row 3: Work Order \"24686870\" is repeated within this log sheet."
+        }
+      ]
+    },
+    {
+      "id": "upl_wljq1w3dn",
+      "fileName": "Image4.jpeg",
+      "filePath": "/uploads/1780815894463-21719551.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Pending Review",
+      "uploadedAt": "2026-06-07T07:04:54.465Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": {
+              "value": "22/4/26",
+              "confidence": 0.95
+            },
+            "shift": {
+              "value": "1",
+              "confidence": 0.95
+            },
+            "employeeNumber": {
+              "value": "BT4686",
+              "confidence": 0.95
+            },
+            "operationCode": {
+              "value": "856490",
+              "confidence": 0.95
+            },
+            "machineNumber": {
+              "value": "MC-720",
+              "confidence": 0.95
+            },
+            "workOrderNumber": {
+              "value": "165455",
+              "confidence": 0.95
+            },
+            "quantityProduced": {
+              "value": "20",
+              "confidence": 0.95
+            },
+            "timeTaken": {
+              "value": "8",
+              "confidence": 0.95
+            }
+          },
+          {
+            "date": {
+              "value": "22/4",
+              "confidence": 0.9
+            },
+            "shift": {
+              "value": "2",
+              "confidence": 0.95
+            },
+            "employeeNumber": {
+              "value": "BT4687",
+              "confidence": 0.95
+            },
+            "operationCode": {
+              "value": "856480",
+              "confidence": 0.95
+            },
+            "machineNumber": {
+              "value": "MC-780",
+              "confidence": 0.95
+            },
+            "workOrderNumber": {
+              "value": "165457",
+              "confidence": 0.95
+            },
+            "quantityProduced": {
+              "value": "30",
+              "confidence": 0.95
+            },
+            "timeTaken": {
+              "value": "7",
+              "confidence": 0.95
+            }
+          },
+          {
+            "date": {
+              "value": "22/4",
+              "confidence": 0.9
+            },
+            "shift": {
+              "value": "3",
+              "confidence": 0.95
+            },
+            "employeeNumber": {
+              "value": "BT4688",
+              "confidence": 0.95
+            },
+            "operationCode": {
+              "value": "856420",
+              "confidence": 0.95
+            },
+            "machineNumber": {
+              "value": "MC-770",
+              "confidence": 0.95
+            },
+            "workOrderNumber": {
+              "value": "165458",
+              "confidence": 0.95
+            },
+            "quantityProduced": {
+              "value": "40",
+              "confidence": 0.95
+            },
+            "timeTaken": {
+              "value": "6.5",
+              "confidence": 0.95
+            }
+          }
+        ],
+        "isMock": false
+      },
+      "validationErrors": [
+        {
+          "rowIdx": 0,
+          "field": "workOrderNumber",
+          "message": "Row 1: Duplicate Work Order \"165455\" already processed in File: Image2.jpeg."
+        }
+      ]
+    },
+    {
+      "id": "upl_xnccllwfs",
+      "fileName": "Image3.jpeg",
+      "filePath": "/uploads/1780816153872-20191260.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Failed",
+      "uploadedAt": "2026-06-07T07:09:13.874Z",
+      "extractedData": null,
+      "validationErrors": [
+        {
+          "field": "general",
+          "message": "Failed to extract data. The image may be illegible or PDF is encrypted."
+        }
+      ]
+    },
+    {
+      "id": "upl_a7vxolrhe",
+      "fileName": "Image4.jpeg",
+      "filePath": "/uploads/1780816224457-349740098.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Failed",
+      "uploadedAt": "2026-06-07T07:10:24.460Z",
+      "extractedData": null,
+      "validationErrors": [
+        {
+          "field": "general",
+          "message": "Failed to extract data. The image may be illegible or PDF is encrypted."
+        }
+      ]
+    },
+    {
+      "id": "upl_4tn8tc1sd",
+      "fileName": "Image3.jpeg",
+      "filePath": "/uploads/1780817455977-561917886.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Pending Review",
+      "uploadedAt": "2026-06-07T07:30:55.979Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": "21/4/26",
+            "shift": "1",
+            "employeeNumber": "BT4685 856472",
+            "operationCode": "856420",
+            "machineNumber": "Mc-810",
+            "workOrderNumber": "165410",
+            "quantityProduced": "25",
+            "timeTaken": "8.0",
+            "date_confidence": 0.95,
+            "shift_confidence": 0.98,
+            "employeeNumber_confidence": 0.9,
+            "operationCode_confidence": 0.95,
+            "machineNumber_confidence": 0.98,
+            "workOrderNumber_confidence": 0.95,
+            "quantityProduced_confidence": 0.98,
+            "timeTaken_confidence": 0.95
+          },
+          {
+            "date": "21/4/26",
+            "shift": "2",
+            "employeeNumber": "BT4686 856425",
+            "operationCode": "856460",
+            "machineNumber": "Mc-820",
+            "workOrderNumber": "165420",
+            "quantityProduced": "35",
+            "timeTaken": "7.0",
+            "date_confidence": 0.95,
+            "shift_confidence": 0.98,
+            "employeeNumber_confidence": 0.9,
+            "operationCode_confidence": 0.95,
+            "machineNumber_confidence": 0.98,
+            "workOrderNumber_confidence": 0.95,
+            "quantityProduced_confidence": 0.98,
+            "timeTaken_confidence": 0.95
+          },
+          {
+            "date": "21/4/26",
+            "shift": "3",
+            "employeeNumber": "BT4787 856437",
+            "operationCode": "856430",
+            "machineNumber": "Mc-840",
+            "workOrderNumber": "165430",
+            "quantityProduced": "47",
+            "timeTaken": "6.5",
+            "date_confidence": 0.95,
+            "shift_confidence": 0.98,
+            "employeeNumber_confidence": 0.9,
+            "operationCode_confidence": 0.95,
+            "machineNumber_confidence": 0.98,
+            "workOrderNumber_confidence": 0.95,
+            "quantityProduced_confidence": 0.98,
+            "timeTaken_confidence": 0.95
+          }
+        ],
+        "isMock": false
+      },
+      "validationErrors": [
+        {
+          "rowIdx": 0,
+          "field": "employeeNumber",
+          "message": "Row 1: Invalid employee number: \"BT4685 856472\". Must be alphanumeric."
+        },
+        {
+          "rowIdx": 1,
+          "field": "employeeNumber",
+          "message": "Row 2: Invalid employee number: \"BT4686 856425\". Must be alphanumeric."
+        },
+        {
+          "rowIdx": 2,
+          "field": "employeeNumber",
+          "message": "Row 3: Invalid employee number: \"BT4787 856437\". Must be alphanumeric."
+        }
+      ]
+    },
+    {
+      "id": "upl_80zyfdi7t",
+      "fileName": "Image1.jpeg",
+      "filePath": "/uploads/1780817514088-911051663.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Pending Review",
+      "uploadedAt": "2026-06-07T07:31:54.089Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": "20/4/26",
+            "shift": "I",
+            "employeeNumber": "BT4710",
+            "operationCode": "856430",
+            "machineNumber": "MC-730",
+            "workOrderNumber": "165460",
+            "quantityProduced": "25",
+            "timeTaken": "4.0",
+            "date_confidence": 0.95,
+            "shift_confidence": 0.9,
+            "employeeNumber_confidence": 0.95,
+            "operationCode_confidence": 0.95,
+            "machineNumber_confidence": 0.95,
+            "workOrderNumber_confidence": 0.95,
+            "quantityProduced_confidence": 0.95,
+            "timeTaken_confidence": 0.95
+          },
+          {
+            "date": "20/4/26",
+            "shift": "II",
+            "employeeNumber": "BT4720",
+            "operationCode": "856460",
+            "machineNumber": "MC-780",
+            "workOrderNumber": "165470",
+            "quantityProduced": "37",
+            "timeTaken": "8.0",
+            "date_confidence": 0.95,
+            "shift_confidence": 0.9,
+            "employeeNumber_confidence": 0.95,
+            "operationCode_confidence": 0.95,
+            "machineNumber_confidence": 0.95,
+            "workOrderNumber_confidence": 0.95,
+            "quantityProduced_confidence": 0.95,
+            "timeTaken_confidence": 0.95
+          },
+          {
+            "date": "20/4/26",
+            "shift": "III",
+            "employeeNumber": "BT4720",
+            "operationCode": "856470",
+            "machineNumber": "MC-850",
+            "workOrderNumber": "601200",
+            "quantityProduced": "28",
+            "timeTaken": "7.5",
+            "date_confidence": 0.95,
+            "shift_confidence": 0.9,
+            "employeeNumber_confidence": 0.95,
+            "operationCode_confidence": 0.95,
+            "machineNumber_confidence": 0.95,
+            "workOrderNumber_confidence": 0.95,
+            "quantityProduced_confidence": 0.95,
+            "timeTaken_confidence": 0.95
+          }
+        ],
+        "isMock": false
+      },
+      "validationErrors": [
+        {
+          "rowIdx": 0,
+          "field": "workOrderNumber",
+          "message": "Row 1: Duplicate Work Order \"165460\" already processed in File: Image6.jpeg."
+        },
+        {
+          "rowIdx": 1,
+          "field": "workOrderNumber",
+          "message": "Row 2: Duplicate Work Order \"165470\" already processed in File: Image1.jpeg."
+        },
+        {
+          "rowIdx": 2,
+          "field": "workOrderNumber",
+          "message": "Row 3: Duplicate Work Order \"601200\" already processed in File: Image1.jpeg."
+        }
+      ]
+    },
+    {
+      "id": "upl_n945c96o7",
+      "fileName": "Image6.jpeg",
+      "filePath": "/uploads/1780817751714-374427286.jpeg",
+      "mimeType": "image/jpeg",
+      "status": "Reviewed",
+      "uploadedAt": "2026-06-07T07:35:51.718Z",
+      "extractedData": {
+        "rows": [
+          {
+            "date": {
+              "value": "19/4/26",
+              "confidence": 0.98
+            },
+            "shift": {
+              "value": "I",
+              "confidence": 0.97
+            },
+            "employeeNumber": {
+              "value": "BT4685",
+              "confidence": 0.95
+            },
+            "operationCode": {
+              "value": "856430",
+              "confidence": 0.95
+            },
+            "machineNumber": {
+              "value": "Mc-730",
+              "confidence": 0.96
+            },
+            "workOrderNumber": {
+              "value": "165450",
+              "confidence": 0.95
+            },
+            "quantityProduced": {
+              "value": "5",
+              "confidence": 0.98
+            },
+            "timeTaken": {
+              "value": "3.5",
+              "confidence": 0.98
+            }
+          },
+          {
+            "date": {
+              "value": "19/4/26",
+              "confidence": 0.98
+            },
+            "shift": {
+              "value": "II",
+              "confidence": 0.97
+            },
+            "employeeNumber": {
+              "value": "BT4785",
+              "confidence": 0.9
+            },
+            "operationCode": {
+              "value": "856440",
+              "confidence": 0.95
+            },
+            "machineNumber": {
+              "value": "Mc-740",
+              "confidence": 0.96
+            },
+            "workOrderNumber": {
+              "value": "165460",
+              "confidence": 0.95
+            },
+            "quantityProduced": {
+              "value": "10",
+              "confidence": 0.98
+            },
+            "timeTaken": {
+              "value": "5.0",
+              "confidence": 0.98
+            }
+          },
+          {
+            "date": {
+              "value": "19/4/26",
+              "confidence": 0.98
+            },
+            "shift": {
+              "value": "III",
+              "confidence": 0.97
+            },
+            "employeeNumber": {
+              "value": "BT6025",
+              "confidence": 0.95
+            },
+            "operationCode": {
+              "value": "856450",
+              "confidence": 0.95
+            },
+            "machineNumber": {
+              "value": "Mc-750",
+              "confidence": 0.96
+            },
+            "workOrderNumber": {
+              "value": "165450",
+              "confidence": 0.95
+            },
+            "quantityProduced": {
+              "value": "-",
+              "confidence": 0.99
+            },
+            "timeTaken": {
+              "value": "6",
+              "confidence": 0.98
+            }
+          }
+        ],
+        "isMock": false
+      },
+      "validationErrors": [
+        {
+          "rowIdx": 1,
+          "field": "workOrderNumber",
+          "message": "Row 2: Duplicate Work Order \"165460\" already processed in File: Image1.jpeg."
+        },
+        {
+          "rowIdx": 2,
+          "field": "workOrderNumber",
+          "message": "Row 3: Work Order \"165450\" is repeated within this log sheet."
+        }
+      ]
+    }
+  ]
+}
